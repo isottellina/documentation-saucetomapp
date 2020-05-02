@@ -261,28 +261,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ocpizza`.`promotion`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ocpizza`.`promotion` ;
-
-CREATE TABLE IF NOT EXISTS `ocpizza`.`promotion` (
-  `id` INT NOT NULL,
-  `product_id` INT NOT NULL,
-  `percentage` DECIMAL(5,2) NOT NULL,
-  `start_of_promotion` DATE NULL,
-  `end_of_promotion` DATE NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_promotion_1_idx` (`product_id` ASC) VISIBLE,
-  CONSTRAINT `fk_promotion_1`
-    FOREIGN KEY (`product_id`)
-    REFERENCES `ocpizza`.`product` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
 -- Table `ocpizza`.`address`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ocpizza`.`address` ;

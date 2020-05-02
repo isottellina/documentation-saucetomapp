@@ -6,7 +6,6 @@ DELETE FROM association_order_product WHERE order_id <= 628 OR product_id <= 8;
 DELETE FROM association_menu_product WHERE menu_id <= 8 OR product_id <= 8;
 DELETE FROM address WHERE id <= 60;
 DELETE FROM payment_method WHERE id <= 60;
-DELETE FROM promotion WHERE id <= 2;
 DELETE FROM picture WHERE id <= 6;
 DELETE FROM ingredient WHERE id <= 8;
 DELETE FROM product WHERE id <= 8;
@@ -272,11 +271,6 @@ INSERT INTO picture (id, product_id, url) VALUES
        (4, 4, '/pictures/mozarella_sticks.png'),
        (5, 5, '/pictures/coca.png'),
        (6, 6, '/pictures/lava_cake.png');
-
--- Promotions
-INSERT INTO promotion (id, product_id, percentage) VALUES
-       (1, 7, 15.0),
-       (2, 3, 25.0);
 
 -- Payment methods
 INSERT INTO payment_method (id, user_id, card_number, name, expiration_date, cryptogram) VALUES
